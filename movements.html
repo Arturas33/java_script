@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Button</h1>
+
+<button onclick="on()">onclick</button>
+<p id="onclick">  </p>
+
+<button oncontextmenu="menu()">oncontextmenu</button>
+<p id="oncontextmenu"></p>
+
+<button ondblclick ="db()">ondblclick</button>
+<p id="ondblclick"></p>
+
+<button onmousedown ="onm()">onmousedown</button>
+<p id="onmousedown"></p>
+
+<button onmouseenter ="seenter()">onmouseenter</button>
+<p id="onmouseenter"></p>
+
+<button onmouseleave ="leave()">onmouseleave</button>
+<p id="onmouseleave"></p>
+
+<button onmousemove ="move()">onmousemove</button>
+<p id="onmousemove"></p>
+
+<button onmouseover="over()">onmouseover</button>
+<p id="onmouseover"></p>
+
+<button onmouseout="out()">onmouseout</button>
+<p id="onmouseout"></p>
+
+<button onmouseup="up()">onmouseup</button>
+<p id="onmouseup"></p>
+<br>
+<button onkeydown="document.getElementById('onclick').innerHTML = 'somfing '">onmouseup</button>
+<br>
+<button onkeypress="document.getElementById('onclick').innerHTML = 'error'">onkeyprees</button>
+<br>
+<button onkeyup="document.getElementById('onclick').innerHTML = 'just press'">onkeyup</button>
+
+<div>
+   <select id="select" onclick="select()">
+       <option value="bmw">bmw</option>
+       <option value="audi">audi</option>
+       <option value="mb">mb</option>
+   </select>
+</div>
+<h3 id="selects"></h3>
+
+<button onclick="index()">text</button>
+<p id="text"></p>
+
+<button onclick="lastIndex()">lastIndex</button>
+<p id="lastIndex"></p>
+
+<script>
+    document.getElementById("onclick").innerHTML = "Hello ";
+    function on() {
+        document.getElementById("onclick").innerHTML = "Hello ";
+    }
+    function menu() {
+        document.getElementById("oncontextmenu").innerHTML = "World";
+    }
+    function db() {
+        document.getElementById("ondblclick").innerHTML = "Go!!!";
+    }
+    function onm() {
+        document.getElementById("onmousedown").innerHTML = "Down";
+    }
+    function seenter() {
+        document.getElementById("onmouseenter").innerHTML = "La La La";
+    }
+    function leave() {
+        document.getElementById("onmouseleave").innerHTML = "Hey ";
+    }
+    function move() {
+        document.getElementById("onmousemove").innerHTML = "Bay Bay ";
+    }
+    function over() {
+        document.getElementById("onmouseover").innerHTML = "Over";
+    }
+    function out() {
+        document.getElementById("onmouseout").innerHTML = "Over";
+    }
+    function up() {
+        document.getElementById("onmouseup").innerHTML = "Over";
+    }
+    function select() {
+        var x = document.getElementById("select").value;
+        document.getElementById("selects").innerHTML = x;
+    }
+
+    var text = 'text';
+    var y = new String('true');
+    var b = new String('true');
+
+    console.log(b == y);
+
+
+    function index() {
+        var text = 'labas ir rytas';
+        var t = text.indexOf('ir');
+        document.getElementById("text").innerHTML = t;
+    }
+
+    function lastIndex() {
+        var text = 'lanas rytas tau ';
+        var t = text.lastIndexOf('tau');
+        document.getElementById("lastIndex").innerHTML = t;
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
